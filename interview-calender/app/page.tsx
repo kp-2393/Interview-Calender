@@ -1,8 +1,7 @@
-import { Session } from "next-auth";
 import {getServerSession} from "next-auth/next"
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import DatePicker from "./components/Calender";
-export default async function Home({ user }: Session) {
+export default async function Home() {
   const session =  await getServerSession(authOptions)
   return (
     <main>
